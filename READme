@@ -1,0 +1,162 @@
+# 📊 Customer Churn Prediction Web App
+
+A Machine Learning powered **Customer Churn Prediction System** built using **Python, Scikit-Learn, and Streamlit**.
+The application predicts the probability that a telecom customer will **leave the service (churn)** based on their account and service details.
+
+---
+
+# 🚀 Live Prediction Interface
+
+Users can input customer details such as:
+
+* Tenure
+* Monthly Charges
+* Contract Type
+* Internet Service
+* Tech Support
+* Payment Method
+* Online Security
+* Senior Citizen Status
+* Partner Status
+
+The system then calculates:
+
+* **Churn Probability**
+* **Risk Level (Low / Medium / High)**
+
+---
+
+# 🧠 Machine Learning Model
+
+The project uses a **Random Forest Classifier** trained on telecom customer data.
+
+### Feature Engineering
+
+Additional features were created to improve prediction quality:
+
+* **TotalCharges**
+* **avg_charges_per_month**
+* **charges_tenure_ratio**
+
+### Data Processing Steps
+
+1. Data Cleaning
+2. Feature Engineering
+3. One-Hot Encoding of categorical variables
+4. Feature Scaling using StandardScaler
+5. Model Training using Random Forest
+
+---
+
+# 🖥️ Tech Stack
+
+* **Python**
+* **Pandas**
+* **Scikit-Learn**
+* **Streamlit**
+* **Pickle**
+
+---
+
+# 📂 Project Structure
+
+```
+Customer-Churn-Predictor
+│
+├── app.py                # Streamlit web app
+├── random_forest.pkl     # Trained ML model
+├── scaler.pkl            # Feature scaler
+├── feature_names.pkl     # Model feature list
+│
+├── dataset/
+│   └── telecom_data.csv
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/yourusername/customer-churn-predictor.git
+cd customer-churn-predictor
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Run the Application
+
+Start the Streamlit server:
+
+```
+streamlit run app.py
+```
+
+The app will open in your browser at:
+
+```
+http://localhost:8501
+```
+
+---
+
+# 📊 Output Example
+
+The model returns:
+
+* **Churn Probability** (percentage)
+* **Risk Level Indicator**
+* **Visual Progress Bar**
+
+Example:
+
+```
+Churn Probability: 67%
+Risk Level: Medium Risk
+```
+
+---
+
+# 📈 Future Improvements
+
+Possible enhancements:
+
+* SHAP Explainability
+* Feature Importance Visualization
+* Batch Prediction from CSV
+* Model Performance Dashboard
+* Cloud Deployment (AWS / Streamlit Cloud)
+
+---
+
+# 🎯 Use Case
+
+Telecom companies can use this system to:
+
+* Identify customers likely to churn
+* Provide retention offers
+* Improve customer satisfaction
+* Reduce revenue loss
+
+---
+
+# 👨‍💻 Author
+
+**Nishikant Kumar**
+B.Tech – Data Science & Artificial Intelligence
+IIIT Naya Raipur
+
+---
+
+# ⭐ If you like this project
+
+Give the repository a **star ⭐ on GitHub**.
