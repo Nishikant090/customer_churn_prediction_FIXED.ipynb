@@ -76,6 +76,24 @@ Customer-Churn-Predictor
 
 ---
 
+# 🐳 Run with Docker
+
+No Python setup needed:
+
+```
+docker build -t churn-predictor .
+docker run -d -p 8501:8501 --name churn churn-predictor
+```
+
+Open http://localhost:8501
+
+* Slim `python:3.11-slim` base, runs as a non-root user
+* scikit-learn pinned to **1.6.1**, the version the `.pkl` models were trained with
+* Built-in `HEALTHCHECK` on Streamlit's health endpoint (`docker ps` shows *healthy*)
+* `.dockerignore` keeps the notebook and unused models out of the image
+
+---
+
 # ⚙️ Installation
 
 Clone the repository:

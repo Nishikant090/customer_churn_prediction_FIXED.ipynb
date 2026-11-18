@@ -1,0 +1,10 @@
+.git
+__pycache__/
+*.ipynb
+.ipynb_checkpoints/
+gradient_boosting.pkl
+logistic_regression.pkl
+best_automl_model.pkl
+dataset/
+Dockerfile
+.dockerignore

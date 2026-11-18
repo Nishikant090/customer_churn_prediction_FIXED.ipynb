@@ -7,6 +7,13 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+# Must be the first Streamlit command (before the cached model load)
+st.set_page_config(
+    page_title="Customer Churn Predictor",
+    page_icon="📊",
+    layout="wide"
+)
+
 # ─────────────────────────────────────────────
 # Load Model Artifacts
 # ─────────────────────────────────────────────
@@ -39,11 +46,6 @@ numeric_cols = [
 # ─────────────────────────────────────────────
 # Streamlit UI
 # ─────────────────────────────────────────────
-st.set_page_config(
-    page_title="Customer Churn Predictor",
-    page_icon="📊",
-    layout="wide"
-)
 
 st.title("📊 Customer Churn Predictor")
 st.markdown("Enter customer details to estimate churn probability.")
@@ -178,4 +180,4 @@ if st.button("🔮 Predict Churn Risk", type="primary"):
     st.markdown(
         f"### Risk Level: <span style='color:{color}'>{risk}</span>",
         unsafe_allow_html=True
-    )
+    )
